@@ -51,7 +51,7 @@ def test_boxarrow():
                   transform=fig1.transFigure,
                   bbox=dict(boxstyle=stylename, fc="w", ec="k"))
 
-@image_comparison(baseline_images=['halfleftleft_test_image'])
+@image_comparison(baseline_images=['halfleftleft_test_image'] ,extensions=['png'])
 def test_halfleftleftarrow():
     r = [0.1, 0.3, 0.5]
     t = ["hl<-"]
@@ -69,7 +69,7 @@ def test_halfleftleftarrow():
             ax.tick_params(labelleft=False, labelbottom=False)
 
 
-@image_comparison(baseline_images=['halfleftright_test_image'])
+@image_comparison(baseline_images=['halfleftright_test_image'],extensions=['png'])
 def test_halfleftrightarrow():
     r = [0.1, 0.3, 0.5]
     t = ["hl->"]
@@ -87,7 +87,7 @@ def test_halfleftrightarrow():
             ax.tick_params(labelleft=False, labelbottom=False)
 
 
-@image_comparison(baseline_images=['halfrightleft_test_image'])
+@image_comparison(baseline_images=['halfrightleft_test_image'], extensions=['png'])
 def test_halfrightleftarrow():
     r = [0.1, 0.3, 0.5]
     t = ["hr<-"]
@@ -105,7 +105,7 @@ def test_halfrightleftarrow():
             ax.tick_params(labelleft=False, labelbottom=False)
 
 
-@image_comparison(baseline_images=['halfrightright_test_image'])
+@image_comparison(baseline_images=['halfrightright_test_image'],extensions=['png'])
 def test_halfrightrightarrow():
     r = [0.1, 0.3, 0.5]
     t = ["hr->"]
@@ -124,7 +124,7 @@ def test_halfrightrightarrow():
 
 
 
-@image_comparison(baseline_images=['halfarrowlong_test_image'])
+@image_comparison(baseline_images=['halfarrowlong_test_image'], extensions=['png'])
 def test_halfarrowlong():
     r = [0.1, 0.2]
     t = ["<-", "hl<-", "hr<-", "->", "hl->", "hr->"]
@@ -142,7 +142,7 @@ def test_halfarrowlong():
             ax.tick_params(labelleft=False, labelbottom=False)
 
 
-@image_comparison(baseline_images=['halfarrowshort_test_image'])
+@image_comparison(baseline_images=['halfarrowshort_test_image'],extensions=['png'])
 def test_halfarrowshort():
     r = [0.5, 0.6]
     t = ["<-", "hl<-", "hr<-", "->", "hl->", "hr->"]
