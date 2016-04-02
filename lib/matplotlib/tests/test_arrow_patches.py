@@ -51,6 +51,114 @@ def test_boxarrow():
                   transform=fig1.transFigure,
                   bbox=dict(boxstyle=stylename, fc="w", ec="k"))
 
+@image_comparison(baseline_images=['halfleftleft_test_image'])
+def test_halfleftleftarrow():
+    r = [0.1, 0.3, 0.5]
+    t = ["hl<-"]
+
+    fig, axes = plt.subplots(len(t), len(r), squeeze=False,
+        subplot_kw=dict(aspect=True),
+        figsize=(3, 8))
+
+    for i_r, r1 in enumerate(r):
+        for i_t, t1 in enumerate(t):
+            ax = axes[i_t, i_r]
+            ax.annotate('', xy=(0.5,    0.1 + r1), xytext=(0.5, 0.9), size=30,
+                arrowprops=dict(arrowstyle=t1,
+                                fc="b", ec='k'))
+            ax.tick_params(labelleft=False, labelbottom=False)
+
+
+@image_comparison(baseline_images=['halfleftright_test_image'])
+def test_halfleftrightarrow():
+    r = [0.1, 0.3, 0.5]
+    t = ["hl->"]
+
+    fig, axes = plt.subplots(len(t), len(r), squeeze=False,
+        subplot_kw=dict(aspect=True),
+        figsize=(3, 8))
+
+    for i_r, r1 in enumerate(r):
+        for i_t, t1 in enumerate(t):
+            ax = axes[i_t, i_r]
+            ax.annotate('', xy=(0.5,    0.1 + r1), xytext=(0.5, 0.9), size=30,
+                arrowprops=dict(arrowstyle=t1,
+                                fc="b", ec='k'))
+            ax.tick_params(labelleft=False, labelbottom=False)
+
+
+@image_comparison(baseline_images=['halfrightleft_test_image'])
+def test_halfrightleftarrow():
+    r = [0.1, 0.3, 0.5]
+    t = ["hr<-"]
+
+    fig, axes = plt.subplots(len(t), len(r), squeeze=False,
+        subplot_kw=dict(aspect=True),
+        figsize=(3, 8))
+
+    for i_r, r1 in enumerate(r):
+        for i_t, t1 in enumerate(t):
+            ax = axes[i_t, i_r]
+            ax.annotate('', xy=(0.5,    0.1 + r1), xytext=(0.5, 0.9), size=30,
+                arrowprops=dict(arrowstyle=t1,
+                                fc="b", ec='k'))
+            ax.tick_params(labelleft=False, labelbottom=False)
+
+
+@image_comparison(baseline_images=['halfrightright_test_image'])
+def test_halfrightrightarrow():
+    r = [0.1, 0.3, 0.5]
+    t = ["hr->"]
+
+    fig, axes = plt.subplots(len(t), len(r), squeeze=False,
+        subplot_kw=dict(aspect=True),
+        figsize=(3, 8))
+
+    for i_r, r1 in enumerate(r):
+        for i_t, t1 in enumerate(t):
+            ax = axes[i_t, i_r]
+            ax.annotate('', xy=(0.5,    0.1 + r1), xytext=(0.5, 0.9), size=30,
+                arrowprops=dict(arrowstyle=t1,
+                                fc="b", ec='k'))
+            ax.tick_params(labelleft=False, labelbottom=False)
+
+
+
+@image_comparison(baseline_images=['halfarrowlong_test_image'])
+def test_halfarrowlong():
+    r = [0.1, 0.2]
+    t = ["<-", "hl<-", "hr<-", "->", "hl->", "hr->"]
+
+    fig, axes = plt.subplots(len(t), len(r), squeeze=False,
+        subplot_kw=dict(aspect=True),
+        figsize=(3, 8))
+
+    for i_r, r1 in enumerate(r):
+        for i_t, t1 in enumerate(t):
+            ax = axes[i_t, i_r]
+            ax.annotate('', xy=(0.5,    0.1 + r1), xytext=(0.5, 0.9), size=30,
+                arrowprops=dict(arrowstyle=t1,
+                                fc="b", ec='k'))
+            ax.tick_params(labelleft=False, labelbottom=False)
+
+
+@image_comparison(baseline_images=['halfarrowshort_test_image'])
+def test_halfarrowshort():
+    r = [0.5, 0.6]
+    t = ["<-", "hl<-", "hr<-", "->", "hl->", "hr->"]
+
+    fig, axes = plt.subplots(len(t), len(r), squeeze=False,
+        subplot_kw=dict(aspect=True),
+        figsize=(5, 9))
+
+    for i_r, r1 in enumerate(r):
+        for i_t, t1 in enumerate(t):
+            ax = axes[i_t, i_r]
+            ax.annotate('', xy=(0.5,    0.1 + r1), xytext=(0.5, 0.9), size=30,
+                arrowprops=dict(arrowstyle=t1,
+                                fc="b", ec='k'))
+            ax.tick_params(labelleft=False, labelbottom=False)
+
 
 if __name__ == '__main__':
     import nose
